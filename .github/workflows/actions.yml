@@ -19,4 +19,4 @@ jobs:
           publish_dir: dist
           exclude_assets: 'report.html'
           user_name: 'STAC Browser CI'
-          # user_email: matthias.mohr@radiant.earth
+          user_email: m.hadizade1991y@gmail.com
