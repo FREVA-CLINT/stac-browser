@@ -32,6 +32,9 @@
             <component :is="authIcon" /> <span class="button-label">{{ authLabel }}</span>
           </b-button>
         </b-button-group>
+        <a href="https://www.freva.dkrz.de/">
+          <img src="https://www.dkrz.de/@@site-logo/dkrz.svg" class="logos" alt="Logos: DKRZ">
+        </a>
       </p>
     </b-col>
   </b-row>

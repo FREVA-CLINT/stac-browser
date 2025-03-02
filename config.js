@@ -1,34 +1,28 @@
+const TITLE = "Free Evaluation System Framework (Freva) - STAC API";
 module.exports = {
-    catalogUrl: null,
-    catalogTitle: "STAC Browser",
-    allowExternalAccess: true, // Must be true if catalogUrl is not given
-    allowedDomains: [],
+    catalogUrl: "https://www.freva.dkrz.de/",
+    catalogTitle: TITLE,
+    allowExternalAccess: false,
+    allowedDomains: [
+      "dkrz.de"
+    ],
     detectLocaleFromBrowser: true,
     storeLocale: true,
     locale: "en",
     fallbackLocale: "en",
     supportedLocales: [
         "de",
-        "ar",
-//      "de-CH",
         "es",
         "en",
-//      "en-GB",
-//      "en-US",
         "fr",
-//      "fr-CA",
-//      "fr-CH",
         "it",
-//      "it-CH",
         "ro",
-        "ja",
-        "pt",
-//      "pt-BR"
+        "pt"
     ],
     apiCatalogPriority: null,
-    useTileLayerAsFallback: true,
+    useTileLayerAsFallback: false,
     displayGeoTiffByDefault: false,
-    buildTileUrlTemplate: ({href, asset}) => "https://tiles.rdnt.io/tiles/{z}/{x}/{y}@2x?url=" + encodeURIComponent(href),
+    buildTileUrlTemplate: null,
     stacProxyUrl: null,
     pathPrefix: "/",
     historyMode: "history",
@@ -40,13 +34,20 @@ module.exports = {
     geoTiffResolution: 128,
     redirectLegacyUrls: false,
     itemsPerPage: 12,
-    maxItemsPerPage: 1000,
     defaultThumbnailSize: null,
     maxPreviewsOnMap: 50,
     crossOriginMedia: null,
     requestHeaders: {},
     requestQueryParameters: {},
     socialSharing: ['email', 'bsky', 'mastodon', 'x'],
-    preprocessSTAC: null,
-    authConfig: null
+    preprocessSTAC: stac => {
+        if (stac.getBrowserPath() === '/') {
+            stac.title = TITLE;
+        }
+        return stac;
+    },
+    authConfig: {
+        type: "openIdConnect",
+        openIdConnectUrl:"https://freva-keycloak.cloud.dkrz.de/realms/Freva/.well-known/openid-configuration"
+    }
 };
