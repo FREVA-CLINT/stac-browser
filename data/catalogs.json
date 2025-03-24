@@ -1,0 +1,15 @@
+[
+    {
+      "id": 1,
+      "url": "https://www.freva.dkrz.de/stac/api/",
+      "slug": "freva-dev",
+      "title": "Freva Development Instance",
+      "summary": "This is a development instance of the Freva STAC API. It is used for testing and development purposes.",
+      "access": "public",
+      "created": "2020-09-02T19:21:50.464Z",
+      "updated": "2020-09-02T19:21:50.464Z",
+      "isPrivate": false,
+      "isApi": true,
+      "accessInfo": null
+    }
+]
