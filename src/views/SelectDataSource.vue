@@ -85,7 +85,7 @@ export default {
     this.$store.commit('resetCatalog', true);
     // Load entries from STAC Index
     try {
-      let response = await axios.get('/data/catalogs.json');
+      let response = await axios.get('data/catalogs.json');
       if(Array.isArray(response.data)) {
         this.stacIndex = response.data;
       }
