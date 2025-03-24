@@ -12,7 +12,7 @@ jobs:
           node-version: 'lts/*'
       - uses: actions/checkout@v4
       - run: npm install
-      - run: npm run build -- --catalogUrl="https://www.freva.dkrz.de/stac/api/" --pathPrefix="/stac-browser-freva/" --historyMode=hash
+      - run: npm run build -- --pathPrefix="/stac-browser-freva/" --historyMode=hash
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

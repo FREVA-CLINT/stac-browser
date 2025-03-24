@@ -85,7 +85,7 @@ export default {
     this.$store.commit('resetCatalog', true);
     // Load entries from STAC Index
     try {
-      let response = await axios.get('https://stacindex.org/api/catalogs');
+      let response = await axios.get('https://raw.githubusercontent.com/FREVA-CLINT/stac-browser-freva/refs/heads/deployment/.freva/catalogs.json');
       if(Array.isArray(response.data)) {
         this.stacIndex = response.data;
       }

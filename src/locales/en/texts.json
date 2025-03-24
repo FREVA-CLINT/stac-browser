@@ -134,7 +134,7 @@
     "api": "API",
     "catalog": "Catalog",
     "load": "Load",
-    "selectStacIndex": "... or select one from {stacIndex}:",
+    "selectStacIndex": "... or select one Freva instance from the following list:",
     "specifyCatalog": "Please specify a STAC Catalog or API...",
     "urlInvalid": "The URL is invalid.",
     "urlMissingHost": "The URL is missing a host.",
