@@ -1,6 +1,6 @@
 const TITLE = "Free Evaluation System Framework (Freva) - STAC API";
 module.exports = {
-    catalogUrl: "https://www.freva.dkrz.de/",
+    catalogUrl: null,
     catalogTitle: TITLE,
     allowExternalAccess: true,
     allowedDomains: [
